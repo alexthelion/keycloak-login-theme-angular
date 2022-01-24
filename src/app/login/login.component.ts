@@ -15,15 +15,17 @@ export class LoginComponent implements OnInit {
     username: [null, Validators.required],
     password: [null, Validators.required],
   });
+  loginTitle: string = 'Sign in to your account';
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder) {
+  }
 
   ngOnInit(): void {
   }
 
   onSubmit(): void {
     const htmlFormElement = this.loginFormHTMLElement.nativeElement;
-    let actionUrl = (window as { [key: string]: any })["g_urlLoginAction"] as string;
+    let actionUrl = (window as { [key: string]: any })["loginAction"] as string;
     actionUrl = actionUrl.replace( /&amp;/g, '&');
     htmlFormElement.action = actionUrl;
     htmlFormElement.submit();
