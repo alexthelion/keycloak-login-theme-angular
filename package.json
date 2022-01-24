@@ -3,21 +3,23 @@
   "version": "0.0.1",
   "author": "Alex Shimanski",
   "description": "Custom login page for Keycloak built with Angular",
-  "maintainers": ["Alex Shimanski"],
+  "maintainers": [
+    "Alex Shimanski"
+  ],
   "license": "MIT",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --base-href \"${url.resourcesPath}/\" --deploy-url /js/",
+    "build": "ng build --base-href \"${url.resourcesPath}/\"",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "echoBdir": "cross-var echo bdir is $keycloak_theme_build",
     "postbuild": "npm run clearBuildDirectory && npm run echoBdir && npm run createThemeDirs && npm run copyRessources && npm run buildLoginFtlPage && npm run copyThemeProperties",
     "createThemeDirs": "npm run createLoginDir",
-    "createLoginDir": "cross-var mkdirp $keycloak_theme_build/login/resources/css",
+    "createLoginDir": "cross-var mkdirp $keycloak_theme_build/login/resources",
     "copyRessources": "npm run copyRessourcesCss && npm run copyRessourcesJs",
-    "copyRessourcesCss": "cross-var copyfiles --up 2 ./dist/keycloak-login-theme-angular/*.css $keycloak_theme_build/login/resources/css/",
-    "copyRessourcesJs": "cross-var copyfiles --up 2 ./dist/keycloak-login-theme-angular/*.js $keycloak_theme_build/login/resources/js/",
+    "copyRessourcesCss": "cross-var copyfiles --up 2 ./dist/keycloak-login-theme-angular/*.css $keycloak_theme_build/login/resources/",
+    "copyRessourcesJs": "cross-var copyfiles --up 2 ./dist/keycloak-login-theme-angular/*.js $keycloak_theme_build/login/resources/",
     "copyThemeProperties": "cross-var copyfiles --up 1 ./properties/theme.properties $keycloak_theme_build/",
     "clearBuildDirectory": "rimraf $keycloak_theme_build",
     "buildLoginFtlPage": "cross-var copyfiles --up 2 ./dist/keycloak-login-theme-angular/index.html $keycloak_theme_build/login/ && node -e \"require('fs').rename('$keycloak_theme_build/login/index.html', '$keycloak_theme_build/login/login.ftl', function(err) { if (err) console.log(err); console.log('File successfully renamed!') })"
@@ -34,10 +36,6 @@
     "@angular/platform-browser": "~13.1.0",
     "@angular/platform-browser-dynamic": "~13.1.0",
     "@angular/router": "~13.1.0",
-    "copyfiles": "^2.4.1",
-    "cross-var": "^1.1.0",
-    "mkdirp": "^1.0.4",
-    "replace": "^1.2.1",
     "rxjs": "~7.4.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
@@ -48,12 +46,17 @@
     "@angular/compiler-cli": "~13.1.0",
     "@types/jasmine": "~3.10.0",
     "@types/node": "^12.11.1",
+    "copyfiles": "^2.4.1",
+    "cross-var": "^1.1.0",
+    "html-script-src-replace": "^0.1.4",
     "jasmine-core": "~3.10.0",
     "karma": "~6.3.0",
     "karma-chrome-launcher": "~3.1.0",
     "karma-coverage": "~2.1.0",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
+    "mkdirp": "^1.0.4",
+    "replace": "^1.2.1",
     "typescript": "~4.5.2"
   }
 }

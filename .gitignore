@@ -43,3 +43,5 @@ Thumbs.db
 
 # build directory
 $keycloak_theme_build/
+
+package-lock.json
