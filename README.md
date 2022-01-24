@@ -3,10 +3,13 @@
 This is a custom login theme generator for Keycloak built with Angular 13 & Angular Material.
 
 ## Generate a theme
-1. Run `ng build` for creating build prod distribution
+1. Run `ng build` for creating a build prod distribution.
 2. After `ng build` is finished it will run `postbuild` script.
    1. The script will create a new folder "$keycloak_theme_build" with all the files by keycloak theme directory structure.
    2. Move the contents of "$keycloak_theme_build" directory to your Keycloak theme folder (inside Keycloak). 
+
+### Example login page in Keycloak
+![Demo Image](images/keycloak_angular.png)
 
 ## Run Angular project instructions
 

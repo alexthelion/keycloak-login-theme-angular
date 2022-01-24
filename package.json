@@ -4,8 +4,21 @@
   "author": "Alex Shimanski",
   "description": "Custom login page for Keycloak built with Angular",
   "maintainers": [
-    "Alex Shimanski"
+    "Alex Shimanski",
+    "RSInnotech LTD"
   ],
+  "keywords": [
+    "angular",
+    "keycloak"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alexthelion/keycloak-login-theme-angular.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alexthelion/keycloak-login-theme-angular/issues"
+  },
+  "homepage": "https://github.com/alexthelion/keycloak-login-theme-angular",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
