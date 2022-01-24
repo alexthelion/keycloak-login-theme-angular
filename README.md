@@ -11,7 +11,12 @@ This is a custom login theme generator for Keycloak built with Angular 13 & Angu
    1. The script will create a new folder "$keycloak_theme_build" with all the files by keycloak theme directory structure.
    2. Move the contents of "$keycloak_theme_build" directory to your Keycloak theme folder (inside Keycloak). 
 
-### Example login page in Keycloak
+### Example of generated login page
+#### Custom theme directory
+![Keycloak dir](images/keycloak_custom_theme_dir.png)
+#### Custom theme selection in Keycloak
+![Keycloak theme](images/keycloak_custom_theme_select.png)
+#### Custom login page in Keycloak
 ![Demo Image](images/keycloak_angular.png)
 
 ### Requirements
