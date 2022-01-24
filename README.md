@@ -1,6 +1,9 @@
 # Keycloak Login Theme Angular
+![MIT](https://img.shields.io/github/license/alexthelion/keycloak-login-theme-angular)
+![Stars](https://img.shields.io/github/stars/alexthelion/keycloak-login-theme-angular?style=social)
 
 This is a custom login theme generator for Keycloak built with Angular 13 & Angular Material.
+
 
 ## Generate a theme
 1. Run `ng build` for creating a build prod distribution.
@@ -10,6 +13,13 @@ This is a custom login theme generator for Keycloak built with Angular 13 & Angu
 
 ### Example login page in Keycloak
 ![Demo Image](images/keycloak_angular.png)
+
+### Requirements
+Tested with the following Keycloak versions:
+* [16.1.0](https://hub.docker.com/layers/jboss/keycloak/16.1.0/images/sha256-6ecb9492224c6cfbb55d43f64a5ab634145d8cc1eba14eae8c37e3afde89546e?context=explore)
+
+Tested with the following Angular versions:
+* [Angular 13](https://github.com/angular/angular-cli)
 
 ## Run Angular project instructions
 
