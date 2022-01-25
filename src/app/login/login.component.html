@@ -6,9 +6,6 @@
     <mat-card-content>
       <form #loginFormHTMLElement [formGroup]="loginForm" id="kc-form-login" name="kc-form-login"
             (ngSubmit)="onSubmit()" method="POST">
-        <mat-error *ngIf="!loginValid">
-          Wrong username or password
-        </mat-error>
         <mat-form-field>
           <input matInput placeholder="Username" formControlName="username"
                  name="username" autocomplete="off" required>
@@ -17,6 +14,10 @@
             Please provide a valid username
           </mat-error>
         </mat-form-field>
+        <mat-error *ngIf="errorMessage === 'invalidUserMessage' && !username.dirty"
+                   class="error-message">
+          Wrong username or password
+        </mat-error>
         <mat-form-field>
           <input matInput type="password" placeholder="Password" formControlName="password"
                  name="password" autocomplete="off" required>
